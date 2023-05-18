@@ -1,13 +1,162 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  display: flex;
+  justify-content: center;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 230px;
+  width: 450px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5 px;
+  background-color: rgb(245, 245, 220, .7);
+  margin-top: 30px;
+}
+
+.container * {
+  margin: 10px 10px;
+}
+
+.balanceNumber {
+  font-size: 30px;
+  color: wh;
+}
+
+.incomeAndExpenses {
+  display: flex;
+  gap: 45px;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+@media (max-width: 280px) {
+  .incomeAndExpenses {
+    gap: 20px;
+  }
+}
+
+
+.incomeNumber {
+  margin-left: -1px;
+  color: green
+}
+
+.expensesNumber {
+  margin-left: -1px;
+  color: red;
+}
+
+.verticalBorder {
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+
+}
+
+.horizontalLine {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.historyListLargeContainer {
+  height: 150px;
+  overflow: auto;
+}
+
+.historyListLargeContainer::-webkit-scrollbar {
+  width: .5em;
+}
+.historyListLargeContainer::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.historyListLargeContainer::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.historyList {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  flex: 1;
+  width: 390px;
+}
+
+.historyAmount {
+  margin-left: auto;
+}
+
+
+.newTransactionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.newTransactionTextBox {
+  height: 30px;
+  padding-left: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.addButton {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 30px;
+  width: 200px;
+  align-self: center;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms, color 250ms;
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 40px;
+  color: black;
+}
+
+.addButton:hover {
+  cursor: pointer;
+  opacity: .7;
+  color: white;
+}
+
+.small {
+  margin-top: -5px;
+  font-size: 10px;
+}
+
+.historyListContainer {
+  display: flex;
+
+}
+
+.deleteBtn {
+  width: 32px;
+  height: 32px;
+  align-self: center;
+  margin-left: -1px;
+  transition: opacity 250ms;
+}
+
+.deleteBtn:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+
+
+
